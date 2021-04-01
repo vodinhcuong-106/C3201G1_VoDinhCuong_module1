@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thu</title>
+</head>
+
+<body>
+<input type="text"placeholder="Nhap he so a"id="hsa">
+<input type="text"placeholder="Nhap he so b"id="hsb">
+<input type="text"placeholder="Nhap he so c"id="hsc">
+<button type="button"onclick="t1()">Ket qua </button>
+</body>
+</html>
+<script>
+
+
+    function t1() {
+        let a=document.getElementById("hsa").value;
+        let b=document.getElementById('hsb').value;
+        let c=document.getElementById('hsc').value;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        let tong=parseInt(a)+parseInt(b)+parseInt(c);
+        document.write("tong 3 so la" +tong);
+    }
+
+</script>

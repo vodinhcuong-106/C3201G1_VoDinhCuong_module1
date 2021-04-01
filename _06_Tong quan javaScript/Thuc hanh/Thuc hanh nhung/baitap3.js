@@ -1,0 +1,2 @@
+function clic(){alert("Hello");
+}
