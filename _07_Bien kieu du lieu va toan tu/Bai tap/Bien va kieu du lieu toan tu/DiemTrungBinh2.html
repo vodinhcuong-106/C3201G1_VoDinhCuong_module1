@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dtb</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th> <lable for="u"> Diem toan</lable></th>
+        <th> Diem ly</th>
+        <th> Diem hoa</th>
+        <th><button type="button"onclick="tong()">tongdiem</button></th>
+        <th> <button type="button"onclick="dtb()">Diem trung binh</button> </th>
+
+    </tr>
+    <tr>
+        <td id="ư"> <input type="text" id="dt"></td>
+        <td> <input type="text" id="dl"></td>
+        <td> <input type="text" id="dh"></td>
+        <td id="tg"> </td>
+        <td id="kq"></td>
+    </tr>
+</table>
+<!--<select>-->
+<!--    <option value="qư">Diemtoan</option>-->
+<!--    <option value="qư">ly</option>-->
+<!--    <option value="qư">hoa</option>-->
+<!--</select>-->
+
+</body>
+</html>
+<script>
+
+
+    function dtb() {
+        let dt1= document.getElementById("dt").value
+        let dl1= document.getElementById("dl").value
+        let dh1= document.getElementById("dh").value
+        let tong1= parseInt(dt1)+parseInt(dl1)+parseInt(dh1);
+        let tb=tong1/3
+
+        console.log(tb)
+        document.getElementById("kq").innerText=tb
+    }
+    function tong() {
+        let dt1= document.getElementById("dt").value
+        let dl1= document.getElementById("dl").value
+        let dh1= document.getElementById("dh").value
+        let t= parseInt(dt1)+parseInt(dl1)+parseInt(dh1);
+        document.getElementById("tg").innerText=t;
+    }
+
+</script>

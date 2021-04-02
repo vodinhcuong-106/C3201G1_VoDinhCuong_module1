@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>maytinh</title>
+</head>
+<body>
+<input id="soa" type="text"name="so1">
+<input id="sob" type="text"name="so2"><br>
+<button type="button"onclick="pt1()">Addition(+)</button>
+<button type="button"onclick="pt2()">subtraction(-)</button>
+<button type="button"onclick="pt3()">Mutiplication(x)</button>
+<button type="button"onclick="pt4()">Divition(/)</button>
+
+</body>
+</html>
+<script>
+
+    function pt1() {
+        let a=document.getElementById("soa").value;
+        let b=document.getElementById("sob").value;
+        let c =parseInt(a)+parseInt(b)
+        document.write("ket qua la "+c)
+    }
+    function pt2() {
+        let a=document.getElementById("soa").value;
+        let b=document.getElementById("sob").value;
+        let e=parseInt(a)-parseInt(b)
+        document.write("ket qua la "+e)
+    }
+    function pt3() {
+        let a=document.getElementById("soa").value;
+        let b=document.getElementById("sob").value;
+        let f=parseInt(a)*parseInt(b)
+        document.write("ket qua la "+f)
+    }
+    function pt4() {
+      let a=document.getElementById("soa").value;
+        let b=document.getElementById("sob").value;
+        let g=parseInt(a)/parseInt(b)
+        document.write("ket qua la "+g)
+    }
+</script>
