@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh-so-ngay-trong-thang</title>
+</head>
+<style>
+    td, th {
+        width: 150px;
+        height: 50px;
+        background-color: cadetblue;
+        color: black;
+        text-align: center;
+        font-size: 20px
+    }
+
+    select, input {
+        width: 150px;
+        height: 50px;
+        text-align: center;
+        background-color: cadetblue;
+        color: black;
+        font-size: 20px
+    }
+</style>
+<body>
+<center>
+<form>
+    <p style="font-size: 40px;color: blue">Kiểm tra số ngày của tháng</p>
+<table>
+    <tr>
+        <th >
+            <select id="m" name="month">
+                <option value="chonthang">chon thang</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+        </th>
+        <th>
+            <input type="button" onclick="result()" value="result">
+        </th>
+        <th> <input style="background-color: chocolate" type="reset"value="reset" </th>
+    </tr>
+    <tr>
+        <td colspan="2" id="kq"><input style="width: 300px;height: 50px;background-color: yellow" type="text"
+                                       placeholder="ket qua"></td>
+    </tr>
+
+</table>
+</form>
+</center>
+</body>
+</html>
+<script>
+    function result() {
+        let month1 = document.getElementById("m").value;
+        let month=parseInt(month1)
+        console.log(month)
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+            document.getElementById("kq").innerText="thang co 30 ngay";
+            break;
+            case 2:
+                document.getElementById("kq").innerText = "thang co 28/29ngay";
+                break;
+            default:
+                document.getElementById("kq").innerText="thang co 31ngay";
+        }
+
+    }
+</script>

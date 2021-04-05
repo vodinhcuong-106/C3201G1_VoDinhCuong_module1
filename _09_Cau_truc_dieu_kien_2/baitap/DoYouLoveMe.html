@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoYouLoveMe</title>
+</head>
+<body>
+<p> <b> Do you love me</b></p>
+<input type="button"value="yes"onclick="ys()" id="y">
+<input type="button"value="no"onmousemove="n()"style="position: absolute ;margin:0px 0px 0px 30px " id="n1">
+</body>
+</html>
+<script>
+    function ys() {
+        alert("<=3")
+    }
+    function n() {
+       let a=Math.round(Math.random()*window.innerWidth);
+        let b=Math.round(Math.random()*window.innerHeight);
+  document.getElementById("n1").style.left=a+'px';
+       document.getElementById("n1").style.top=b+'px';
+
+}
+
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+
+</body>
+</html>
+<!--<script>-->
+<!--    var login= prompt("nhap login")-->
+<!--    let message;-->
+
+<!--    if (login == 'Employee') {-->
+<!--        message = 'Hello';-->
+<!--        alert(message);-->
+<!--    } else if (login == 'Director') {-->
+<!--        message = 'Greetings';-->
+<!--        alert(message);-->
+<!--    } else if (login == '') {-->
+<!--        message = 'No login';-->
+<!--        alert(message);-->
+<!--    } else {-->
+<!--        message = '';-->
+<!--        alert(message);-->
+<!--    }-->
+<!--    alert(message)-->
+<!--</script>-->
+<script>
+    var login= prompt("nhap login");
+
+    let message = (login == 'Employee') ?
+        'Hello' :
+        (login == 'Director') ?
+            'Greetings' :
+            (login == '') ?
+                'No login' :
+                '';
+    alert(message)
+</script>

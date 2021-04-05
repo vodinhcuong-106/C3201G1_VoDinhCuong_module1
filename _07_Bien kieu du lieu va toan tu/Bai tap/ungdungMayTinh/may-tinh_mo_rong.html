@@ -16,12 +16,12 @@
             <th colspan="7"><button id="kiem" style="width: 600px;height: 30px" type="button"></button></></th>
         </tr>
         <tr>
-            <td id="ra"> <button type="button"onclick="pt(rad)">Rad</button></td>
-            <td id="kt"> <button type="button"onclick="Kt()"> kt</button></td>
-            <td id="x"> <button type="button"onclick="pt('!')">X!</button></td>
-            <td id="ng"> <button type="button"onclick="pt('(')">(</button></td>
-            <td id="ng1"> <button type="button"onclick="pt(')')">)</button></td>
-            <td id="pt"> <button type="button"onclick="pt('%')">%</button></td>
+            <td id="ra"> <button type="button"value="rad" onclick="pt(rad)">Rad</button></td>
+            <td id="kt"> <button type="button" value="kt" onclick="Kt()"> kt</button></td>
+            <td id="x"> <button type="button"value="!" onclick="pt('!')">X!</button></td>
+            <td id="ng"> <button type="button"value="(" onclick="pt('(')">(</button></td>
+            <td id="ng1"> <button type="button"value=")" onclick="pt(')')">)</button></td>
+            <td id="pt"> <button type="button" value="%" onclick="pt('%')">%</button></td>
             <td id="a"> <button type="reset"   >AC</button></td>
         </tr>
         <tr>
@@ -39,11 +39,12 @@
             <td id="lg"> <button type="button"onclick="pt('log')">Log</button></td>
             <td id="s4"> <button type="button"onclick="so(4)">4</button></td>
             <td id="s5"> <button type="button"onclick="so(5)">5</button></td>
+
             <td id="6"> <button type="button"onclick="so(6)">6</button></td>
             <td id="x"> <button type="button"onclick="pt('*')">x</button></td>
         </tr>
         <tr>
-            <td id="e1"> <button type="button"onclick="el()">E</button></td>
+            <td id="e1"> <button type="button"onclick="pt()">E</button></td>
             <td id="t"> <button type="button"onclick="pt('tan')"> tan</button></td>
             <td id="cn"> <button type="button"onclick="pt('sqrt')">√</button></td>
             <td id="s1"> <button type="button"onclick="so(1)">1</button></td>
@@ -69,14 +70,7 @@
    function so(num) {
        console.log(num);
        document.getElementById("kiem").innerText=num;
-      let a=document.getElementById("kiem").innerText=num;
-       document.getElementById("kiem").innerText=num;
-       let b=document.getElementById("kiem").innerText=num;
-       let c=(a)+b
-       document.getElementById("kiem").innerText=c;
 
-       let s1=num
-       console.log(s1)
     }
     function pt(num1) {document.getElementById("kiem").innerText=num1
     }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tong-hop</title>
+</head>
+<body>
+<p>bai tap 1nhap a,b kiem tra achia het cho b</p>
+<table border="1">
+    <tr>
+        <th> input a </th>
+        <th> input b </th>
+        <th><input type="button"value="result"onclick="resultbai1()"> </th>
+    </tr>
+    <tr>
+        <td><input type="text"placeholder="giatri a" id="a1"> </td>
+        <td><input type="text"placeholder="giatri b"id="b1"> </td>
+        <td id="kq"></td>
+    </tr>
+</table><BR>
+
+
+<P>bai tap 2 kiem tra tuoi</P>
+<table border="1">
+    <tr>
+        <th> Nhập tuổi </th>
+        <th><input type="button"value="result"onclick="resultbai2()"> </th>
+    </tr>
+    <tr>
+        <td><input type="text"placeholder="nhap tuoi" id="t1"> </td>
+        <td><span id="kqb2"></span></td>
+    </tr>
+</table><br>
+
+
+<p> Bai tap 3 :kiem tra so lơn hon 0 hay nho hơn 0</p>
+<table border="1">
+    <tr>
+        <th> Nhập số </th>
+        <th><input type="button"value="result"onclick="resultbai3()"> </th>
+    </tr>
+    <tr>
+        <td><input type="text"placeholder="nhap số" id="s1"> </td>
+        <td id="kqb3"></td>
+    </tr>
+</table><br>
+
+<p> Bai tap 4: tim so lon nhat trong 3 so </p>
+<table border="1">
+<tr>
+    <th> input x </th>
+    <th> input y </th>
+    <th> input z </th>
+    <th><input type="button"value="result"onclick="resultbai4()"> </th>
+</tr>
+<tr>
+    <td><input type="text"placeholder="giatri x" id="x1"> </td>
+    <td><input type="text"placeholder="giatri y"id="y1"> </td>
+    <td><input type="text"placeholder="giatri z"id="z1"> </td>
+    <td> <input type="text"id="kqb4" ></td>
+</tr>
+</table><BR>
+</body>
+</html>
+
+<!--/bai tap 1-->
+<script>
+    function resultbai1() {
+        let a = parseInt(document.getElementById("a1").value)
+        let b = parseInt(document.getElementById("b1").value)
+        let c = a % b
+        if (c == 0) {
+            document.getElementById("kq").innerText = "a chia het cho b"
+        } else {
+            document.getElementById("kq").innerText = "a ko chia het cho b"
+        }
+    }
+     // bai tap 2
+    function resultbai2() {
+        let t=parseInt(document.getElementById("t1").value);
+    if(t>=15){ document.getElementById("kqb2").innerText="Đủ tuổi vào lớp 10"}
+    else { document.getElementById("kqb2").innerText="ko đủ tuổi"}
+    }
+
+    // bai tap 3
+    function resultbai3() {
+        let s=parseInt(document.getElementById("s1").value);
+        if(s>0){ document.getElementById("kqb3").innerText="So dương"}
+        else { document.getElementById("kqb3").innerText="So âm"}
+    }
+
+    // bai tap 4
+    function resultbai4() {
+        let x =parseInt(document.getElementById("x1").value);
+        let y =parseInt(document.getElementById("y1").value);
+        let z =parseInt(document.getElementById("z1").value);
+        if(x>y) {
+            if (x > z) {
+                document.getElementById("kqb4").value=x;
+
+            } else {
+                document.getElementById("kqb4").value= z;
+            }
+        }
+        else {  if(y>z){document.getElementById("kqb4").value =y
+        }else {  document.getElementById("kqb3").value=z}
+        }}
+</script>

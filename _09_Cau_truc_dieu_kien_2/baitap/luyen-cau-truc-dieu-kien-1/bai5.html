@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<h1>   BÀI 5 ĐÁNH GIÁ NĂNG LỰC HỌC SINH</h1>
+<table border="1">
+    <tr>
+        <th>Điểm kiểm tra</th>
+        <th>Điểm giữ kỳ</th>
+        <th>Điểm cuối kỳ</th>
+        <th>Điểm trung bình</th>
+        <th><input type="button"value="kết quả"onclick="result1()"></th>
+    </tr>
+    <td><input type="text"id="kiemtra"placeholder="diemkiemtra" ></td>
+    <td><input type="text"id="giuaky"placeholder="diemgiuaky" ></td>
+    <td><input type="text"id="cuoiky"placeholder="diemcuoiky" ></td>
+    <td><input type="text"id="tb"placeholder="diemtrungbinh"> </td>
+    <td id="ketqua"> </td>
+</table>
+
+
+</body>
+</html>
+<script>
+    // BÀI 5
+    function result1() {
+        let kt=parseInt(document.getElementById("kiemtra").value);
+        let gk=parseInt(document.getElementById("giuaky").value);
+        let ck=parseInt(document.getElementById("cuoiky").value);
+        let TB=(kt*2+gk*3+ck*5)/10;
+        document.getElementById("tb").value=TB;
+        if(TB<4) {document.getElementById("ketqua").innerText="yeu"}
+        else if(TB<6){document.getElementById("ketqua").innerText="trungbinh"}
+        else if (TB<8)
+        { document.getElementById("ketqua").innerText="Khá"}
+        else { document.getElementById("ketqua").innerText="gioi"}
+    }
+
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may-tinh-don-gian</title>
+</head>
+<style>
+    td,th{width: 50px;height: 30px}
+    input{width: 50px;height: 30px}
+</style>
+<body>
+<center>
+    <p style="font-size: 20px">MÁY TÍNH CÁ NHÂN</p>
+<table border="1">
+    <tr>
+        <th colspan="4"><input style="height: 30px;width: 200px;background-color: cadetblue" type="text" id="result"></th>
+    </tr>
+    <tr>
+        <td><input type="button"value="1"onclick="result.value+=this.value"> </td>
+        <td><input type="button"value="2"onclick="result.value+=this.value"> </td>
+        <td><input type="button"value="3"onclick="result.value+=this.value"> </td>
+        <td><input type="button"value="+"onclick="result.value+=this.value"> </td>
+    </tr>
+    <tr>
+        <td><input type="button"value="4"onclick="result.value+=this.value"> </td>
+        <td><input type="button"value="5"onclick="result.value+=this.value"> </td>
+        <td><input type="button"value="6"onclick="result.value+=this.value"> </td>
+        <td><input type="button"value="-"onclick="result.value+=this.value"> </td>
+    </tr>
+    <tr>
+        <td><input type="button"value="7"onclick="result.value+=this.value"> </td>
+        <td><input type="button"value="8"onclick="result.value+=this.value"> </td>
+        <td><input type="button"value="9"onclick="result.value+=this.value"> </td>
+        <td><input type="button"value="*"onclick="result.value+=this.value"> </td>
+    </tr>
+    <tr>
+        <td><input type="button"value="C"onclick="result.value=''"> </td>
+        <td><input type="button"value="o"onclick="result.value+=this.value"> </td>
+        <td><input type="button"value="="onclick="bang()"> </td>
+        <td> <input type="button"value="/"onclick="result.value+=this.value"> </td>
+    </tr>
+</table>
+</center>
+</body>
+</html>
+<script>
+    function bang() {result.value=eval(result.value);
+    document.getElementById(result).innerText=result.value
+    }
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addmin</title>
+    <style>
+        input{ width: 200px;height: 40px;background-color: darkgrey;color: burlywood;text-align: center;color: blue;
+        }
+    </style>
+</head>
+<body>
+<center>
+<form>
+    <label  for="ten"> LONGIN</label><br>
+    <input style="text-align: center" type="text"name="name1"placeholder="My name"id="ten"><br>
+    <label for="mk"> PASSWORD</label><br>
+    <label><input type="password"name="pw"placeholder="password" id="mk"></label><br><br>
+    <input type="button"value="Longin"onclick="lg()"style="background-color: coral;width:100px" >
+    <input style="background-color: burlywood;width: 100px" type="reset"value="reset">
+</form>
+</center>
+</body>
+</html>
+<script>
+    function lg() {
+        let name = document.getElementById("ten").value;
+       if (name=='admin') {
+           let matkhau=document.getElementById("mk").value;
+           if (matkhau=='TheMaster')
+           { alert("Wellcome")}
+           else if (matkhau==null)
+           { alert('Canceld')}
+           else {alert("wong password")}
+       }
+       else if (name==null){alert("canceld")}
+       else {alert("I don’t know you")}
+    }
+</script>

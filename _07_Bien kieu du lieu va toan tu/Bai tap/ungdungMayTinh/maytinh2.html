@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh2</title>
+    <style>
+        td{ width: 60px;height: 40px}
+        th{ width: 60px;height: 40px}
+        input{width: 60px;height: 40px}
+    </style>
+</head>
+<body>
+<table>
+<tr>
+    <th colspan="4"><input style="width: 250px" type="text" id="result"/></th>
+</tr>
+<tr>
+    <td><input type="button" value="AC" onclick="result.value=''"/></td>
+    <td><input type="button" value="<--" onclick="result.value=result.value.substr(0,result.value.length-1)"/></td>
+    <td><input type="button" value="%" onclick="result.value+=this.value"/></td>
+    <td><input type="button" value="+" onclick="result.value+=this.value"/></td>
+</tr>
+
+<tr>
+    <td><input type="button" value="7" onclick="result.value+=this.value"/></td>
+    <td><input type="button" value="8" onclick="result.value+=this.value"/></td>
+    <td><input type="button" value="9" onclick="result.value+=this.value"/></td>
+    <td><input type="button" value="-" onclick="result.value+=this.value"/></td>
+</tr>
+<tr>
+    <td><input type="button" value="4" onclick="result.value+=this.value"/></td>
+    <td><input type="button" value="5" onclick="result.value+=this.value"/></td>
+    <td><input type="button" value="6" onclick="result.value+=this.value"/></td>
+    <td><input type="button" value="*" onclick="result.value+=this.value"/></td>
+</tr>
+    <tr>
+        <td><input type="button" value="1" onclick="result.value+=this.value"/></td>
+        <td><input type="button" value="2" onclick="result.value+=this.value"/></td>
+        <td><input type="button" value="3" onclick="result.value+=this.value"/></td>
+        <td><input type="button" value="/" onclick="result.value+=this.value"/></td>
+    </tr>
+<tr>
+    <td><input type="button" value="0" onclick="result.value+=this.value"/></td>
+    <td><input type="button" value="."onclick="result.value+=this.value" /></td>
+    <td colspan="2"><input style="width: 125px;height: 40px" type="button" value="=" onclick="bang()"/></td>
+</tr>
+</table>
+</body>
+</html>
+<script>
+    function bang() {
+        result.value = eval(result.value)
+        document.getElementById(result).innerText = result.value
+    }
+
+</script>

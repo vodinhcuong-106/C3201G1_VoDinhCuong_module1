@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td,th{ height: 30px;width: 100px}
+        input {
+            width: 100px;
+            height: 30px
+        }
+    </style>
+</head>
+<body>
+<form>
+<table border="1">
+    <tr>
+        <th><label for="a"> Year</label></th>
+        <th><input type="button" value="KẾTqua" onclick="cl()"></th>
+        <th rowspan="2"> <input type="reset"value="reset"> </th>
+    </tr>
+    <td><input type="text" placeholder="nhập năm" id="a"></td>
+     <td id="kq"> </td>
+</table>
+</form>
+</body>
+</html>
+<script>
+    function cl() {
+        let year1 = document.getElementById("a").value;
+        var year =parseInt(year1)
+        // document.getElementById("kq").innerText="is a leap year"
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    // alert(year + " is a leap year");
+                    document.getElementById("kq").innerText="is a leap year"
+                } else {
+                    // alert(year + " is NOT a leap year");
+                    document.getElementById("kq").innerText=" is NOT a leap year"
+                }
+            } else {
+                // alert(year + " is a leap year");
+                document.getElementById("kq").innerText=" is a leap year"
+            }
+        } else {
+            // alert(year + " is NOT a leap year");
+            document.getElementById("kq").innerText=" is NOT a leap year"
+        }
+    }
+
+
+</script>
