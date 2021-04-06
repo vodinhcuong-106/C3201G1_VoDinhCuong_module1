@@ -4,18 +4,52 @@
     <meta charset="UTF-8">
     <title>good fast cheap</title>
 </head>
+<style>
+    td, th {
+        height: 150px;
+        text-align: right;
+        background-color: darkgrey;
+        color: chartreuse
+    }
+
+    input {
+        width: 40px
+    }
+
+    }
+</style>
 <body>
-<input value="0" id="good" ONCLICK="G()" type="range"min="0"max="1">GOOD<br><br>
-<input value="1" id="cheap" ONCLICK="C()" type="range"min="0"max="1">CHEAP<br><br>
-<input value="1" id="fast" ONCLICK="F()" type="range"min="0"max="1">FAST<br>
+<table cellspacing="0" cellpadding="0">
+    <tr>
+        <th><input value="0" id="good" ONCLICK="G()" type="range" min="0" max="1"></th>
+        <th style="text-align: center" width="200px"><p>GOOD</p></th>
+    </tr>
+    <tr>
+        <td><input value="1" id="cheap" ONCLICK="C()" type="range" min="0" max="1"></td>
+        <td style="text-align: center" width="200px"><p>CHEAP</p></td>
+    </tr>
+    <td><input value="1" id="fast" ONCLICK="F()" type="range" min="0" max="1"></td>
+    <td style="text-align: center" width="200px"><p> FAST</p></td>
+
+    </TR>
+</table>
+<!--<input value="0" id="good" ONCLICK="G()" type="range"min="0"max="1">GOOD<br><br>-->
+<!--<input value="1" id="cheap" ONCLICK="C()" type="range"min="0"max="1">CHEAP<br><br>-->
+<!--<input value="1" id="cheap" ONCLICK="C()" type="range"min="0"max="1">FAST<br>-->
 
 </body>
 </html>
 <script>
-    function G() {document.getElementById("cheap").value=0;
+    function G() {
+        document.getElementById("cheap").value = 0;
     }
-    function C() {document.getElementById("fast").value=0;
+
+    function C() {
+        document.getElementById("fast").value = 0;
     }
-    function F() {document.getElementById("good").value=0;}
+
+    function F() {
+        document.getElementById("good").value = 0;
+    }
 
 </script>

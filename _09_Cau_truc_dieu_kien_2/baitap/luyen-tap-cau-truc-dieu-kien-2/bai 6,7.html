@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 6,7</title>
+</head>
+<style>
+    td,th,input{width: 200px;height: 50px;text-align: center;font-size: 20px}
+</style>
+<body>
+<p><b>bài 6: Giai phương trình bậc nhất ax+b=0</b></p>
+<table border="1">
+    <tr>
+        <th>input a</th>
+        <th>input b</th>
+        <th ><input type="button" onclick="result6()" value="KẾT QUẢ"></th>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="nhap a" id="a1"></td>
+        <td><input type="text" placeholder="nhap b" id="b1"></td>
+        <td ><input  type="text" placeholder="ketqua" id="kq6"></td>
+    </tr>
+</table>
+
+<p><b>bài 7: Giai phương trình bậc nhất ax2+bx+c=0</b></p>
+<table border="1">
+    <tr>
+        <th>input a</th>
+        <th>input b</th>
+        <th>input b</th>
+        <th style="text-align: center" colspan="2"><input type="button" onclick="result7()" value="KẾT QUẢ"></th>
+    </tr>
+    <tr>
+        <td rowspan="2"><input type="text" placeholder="nhap a" id="a2"></td>
+        <td rowspan="2"><input type="text" placeholder="nhap b" id="b2"></td>
+        <td rowspan="2"><input type="text" placeholder="nhap c" id="c2"></td>
+        <td id="kq7"colspan="2"><input type="text" placeholder="ketqua" ></td>
+    </tr>
+    <tr>
+        <td><input type="text"placeholder="nghiem x1="id="nx1"> </td>
+        <td><input type="text"placeholder="nghiem x1="id="nx2"> </td>
+    </tr>
+</table>
+
+
+</body>
+</html>
+<script>
+    // bai 6
+    function result6() {
+        let a = parseInt(document.getElementById("a1").value);
+        let b = parseInt(document.getElementById("b1").value);
+        if (a == 0) {
+            if (b == 0) {
+                document.getElementById("kq6").innerText = "pt vô số nghiệm"
+            } else {
+                document.getElementById("kq6").innerText = "pt vô nghiệm"
+            }
+        } else {
+            let c = -b / a
+            document.getElementById("kq6").value = c
+        }
+    }
+
+    // bai 7
+    function result7() {
+        let hsa = parseInt(document.getElementById("a2").value);
+        let hsb = parseInt(document.getElementById("b2").value);
+        let hsc = parseInt(document.getElementById("c2").value);
+        let delta = hsb * hsb - 4 * hsa * hsc
+        // console.log(hsa);
+        // console.log(hsb);
+        // console.log(hsc);
+        // console.log(delta);
+        if (delta < 0) {
+            document.getElementById("kq7").innerText = "pt vô nghiệm"}
+         else if (delta == 0) {
+            let x = -hsb / 2 * hsa
+            document.getElementById("kq7").innerText="pt co nghiem kep"
+            document.getElementById("nx1").value=x;
+            document.getElementById("nx2").value=x
+        }
+        else { let x1=(-hsb+Math.sqrt(delta))/2/hsa;
+        let x2=(-hsb-Math.sqrt(delta))/2/hsa;
+        document.getElementById("kq7").innerText="pt co 2 nghiem x1,x2="
+            document.getElementById("nx1").value=x1;
+            document.getElementById("nx2").value=x2;
+        }
+   }
+</script>

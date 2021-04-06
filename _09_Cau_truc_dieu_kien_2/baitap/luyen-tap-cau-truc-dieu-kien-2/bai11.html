@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11. tính thuế thu nhập </title>
+</head>
+<body>
+
+<p>TÍNH THUẾ THU NHẬP CÁ NHÂN</p>
+<table border="1">
+    <tr>
+        <th>tiỀN LƯƠNG</th>
+        <th> <input type="button"value="BẬC"onclick="bac()"> </th>
+        <th><input type="button" value="TIỀN THUẾ" onclick="sum()"></th>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder=" tien luong(triệu)" id="tl"></td>
+        <td  ><input type="text" placeholder="bac"id="bac"></td>
+        <td ><input type="text" placeholder="tong" id="t"></td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    function bac() {
+        let b = parseInt(document.getElementById("tl").value);
+        console.log(b)
+        if (b < 5) {
+            document.getElementById("bac").value = "Bậc 1"
+        } else if (b < 10) {
+            document.getElementById("bac").value = "Bậc 2"
+        } else if (b < 18) {
+            document.getElementById("bac").value = "Bậc 3"
+        } else if (b < 32) {
+            document.getElementById("bac").value = "Bậc 4"
+        } else if (b < 52) {
+            document.getElementById("bac").value = "Bậc 5"
+        }else if (b < 80) {
+                document.getElementById("bac").value = "Bậc 6"
+        } else {
+            document.getElementById("bac").value = "Bậc 7"
+        }
+    }
+
+    function sum() {
+        let bc = document.getElementById("bac").value;
+        let chiso = parseInt(document.getElementById("tl").value);
+        switch (bc) {
+            case "Bậc 1": {
+                let tong = chiso * 5/100;
+                document.getElementById("t").value = tong;
+                break;
+            }
+            case "Bậc 2": {
+                let tong = 0.25+(chiso-5)*10/100 ;
+                document.getElementById("t").value = tong;
+                break;
+            }
+            case "Bậc 3": {
+                let tong = 0.75+(chiso-10)*15/100 ;
+                document.getElementById("t").value = tong;
+                break;
+            }
+            case "Bậc 4": {
+                let tong = 1.95+(chiso-18)*20/100 ;
+                document.getElementById("t").value = tong;
+                break;
+            }
+            case "Bậc 5": {
+                let tong = 4.75+(chiso-32)*25/100 ;
+                document.getElementById("t").value = tong;
+                break;
+            }
+            case "Bậc 6": {
+                let tong = 9.75+(chiso-52)*30/100 ;
+                document.getElementById("t").value = tong;
+                break;
+            }
+            case "Bậc 7": {
+                let tong = 18.15+(chiso-80)*25/100 ;
+                document.getElementById("t").value = tong;
+                break;
+            }
+
+        }
+
+    }
+</script>

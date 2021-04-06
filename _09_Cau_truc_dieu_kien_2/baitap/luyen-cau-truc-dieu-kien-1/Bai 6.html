@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoa hồng</title>
+</head>
+<style>
+    th,td{width: 100px;height: 50px;text-align: center}
+    input{ width: 100px;height: 50px}
+</style>
+<body>
+<!--nếu doanh số<=300 thì ko có hoa hồng;-->
+<!--nếu doanh số >300 thì hoa hồng 4000000;-->
+<!--nếu doanh số >500 thì hoa hồng 6000000;-->
+<CENTER>
+<form>
+    <h1> TIỀN LƯƠNG HOA HỒNG</h1>
+<table border="1">
+    <tr>
+        <th> Lương cơ bản</th>
+        <th>Doanh số</th>
+        <th><input type="button" onclick="hoahong()" value="Hoa hồng"</th>
+        <th><input type="button" value="Tổng lương" onclick="sum()"></th>
+        <th rowspan="2"><input type="reset"value="RESET"></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="lcb" placeholder="nhap luongcoban"></td>
+        <td><input type="text" id="ds" placeholder="nhap doanh so"></td>
+        <td><input type="text" id="hh" placeholder="hoa hong"></td>
+        <td><input type="text" id="tong" placeholder="tongluong"></td>
+    </tr>
+</table>
+</form>
+</CENTER>
+</body>
+</html>
+<script>
+    function hoahong() {
+        let dso = parseInt(document.getElementById("ds").value);
+        if (ds <= 300) {
+            document.getElementById("hh").value = 0;
+        } else if (ds < 500) {
+            document.getElementById("hh").value = 4000000
+        } else {
+            document.getElementById("hh").value = 6000000
+        }
+    }
+
+    function sum() {
+        let a = parseInt(document.getElementById("hh").value);
+        let cb = parseInt(document.getElementById("lcb").value);
+        let dso = parseInt(document.getElementById("ds").value);
+        let tong = a + cb + dso;
+        document.getElementById("tong").value = tong;
+    }
+</script>

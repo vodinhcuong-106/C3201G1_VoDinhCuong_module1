@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1,2,3,4,5</title>
+</head>
+<style>
+    th,td{ text-align: center}
+    p{color: red}
+</style>
+<body>
+<p><b>bài 1 :đổi đỘ C sang độ F</b></p>
+<table border="1">
+    <tr>
+        <th>ĐỘ C</th>
+        <th>ĐỘ F</th>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="nhap do C" id="c1"></td>
+        <td><input type="text" id="KQ"></td>
+    </tr>
+    <tr>
+        <td style="text-align: center" colspan="2"><input type="button" onclick="result()" value="KẾT QUẢ"></td>
+    </tr>
+</table>
+
+
+<p><b>bài 2 : chuyển từ m sang fit</b></p>
+<table border="1">
+    <tr>
+        <th>input m</th>
+        <th>output fit</th>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="nhap m" id="m1"></td>
+        <td><input type="text" id="kqb2"></td>
+    </tr>
+    <tr>
+        <td style="text-align: center" colspan="2"><input type="button" onclick="result2()" value="KẾT QUẢ"></td>
+    </tr>
+</table>
+
+<p><b>Bài 3: Tính diện tích hình vuông</b></p>
+<table border="1">
+    <tr>
+        <th> <lable for="a"> Nhập cạnh hình vuông</lable></th>
+        <th> Diện tích</th>
+        <th rowspan="2"><input type="button"onclick="result3()"value="Kết QUẢ"></th>
+    </tr>
+    <tr>
+        <td><input type="text"id="a"></td>
+        <td><input type="text"id="kqb3"></td>
+    </tr>
+</table>
+
+<p><b>bài 4 : Tính diện tích hình chữ nhật</b></p>
+<table border="1">
+    <tr>
+        <th>canh a</th>
+        <th>cạnh b</th>
+        <th>Diện tích</th>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="nhap a" id="a1"></td>
+        <td><input type="text" placeholder="nhap b" id="b1"></td>
+        <td><input type="text" id="kqb4"></td>
+    </tr>
+    <tr>
+        <td style="text-align: center" colspan="2"><input type="button" onclick="result4()" value="KẾT QUẢ"></td>
+    </tr>
+</table>
+
+<p><b>bài 5 : Tính diện tích tam giac vuông</b></p>
+<table border="1">
+    <tr>
+        <th>canh a</th>
+        <th>cạnh b</th>
+        <th>Diện tích</th>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="nhap a" id="a2"></td>
+        <td><input type="text" placeholder="nhap b" id="b2"></td>
+        <td><input type="text" id="kqb5"></td>
+    </tr>
+    <tr>
+        <td style="text-align: center" colspan="2"><input type="button" onclick="result5()" value="KẾT QUẢ"></td>
+    </tr>
+</table>
+
+</body>
+</html>
+<script>
+    // bai 1
+    function result() {
+        let C = parseInt(document.getElementById("c1").value);
+        let F = C * 9 / 5 + 32;
+        document.getElementById("KQ").value = F;
+    }
+
+    // bai2
+    function result2() {
+        let m = parseInt(document.getElementById("m1").value);
+        let fit = m * 2.808;
+        document.getElementById("kqb2").value = fit
+    }
+
+    // bai3
+    function result3() {
+        let canha = parseInt(document.getElementById("a").value);
+        let dt = canha * canha;
+        document.getElementById("kqb3").value = dt}
+
+    // bai4
+    function result4() {
+        let a = parseInt(document.getElementById("a1").value);
+        let b= parseInt(document.getElementById("b1").value);
+        let dt1 = a * b;
+        document.getElementById("kqb4").value = dt1}
+
+    // bai5
+    function result5() {
+        let ca = parseInt(document.getElementById("a2").value);
+        let cb= parseInt(document.getElementById("b2").value);
+        let dt2 = ca * cb/2;
+        document.getElementById("kqb5").value = dt2}
+</script>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tien dien thoại</title>
+</head>
+<style>
+    th {
+        text-align: center;
+        background-color: cadetblue;
+        color: red
+    }
+</style>
+<body>
+<center>
+
+        <p>TÍNH CƯỚC ĐIỆN THOẠI</p>
+        <table border="1">
+            <tr>
+                <th>SỐ PHÚT GỌI</th>
+              <th> <input type="button"value="BẬC"onclick="bac()"> </th>
+                <th><input type="button" value="result" onclick="sum()"></th>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder=" so phút" id="sd"></td>
+                <td  ><input type="text" placeholder="bac"id="bac"></td>
+                <td ><input type="text" placeholder="tong" id="t"></td>
+            </tr>
+        </table>
+
+</center>
+</body>
+</html>
+<script>
+    function bac() {
+        let b = parseInt(document.getElementById("sd").value);
+        console.log(b)
+        if (b < 50) {
+            document.getElementById("bac").value = "Bậc 1"
+        } else if (b < 100) {
+            document.getElementById("bac").value = "Bậc 2"
+        } else if (b < 200) {
+            document.getElementById("bac").value = "Bậc 3"
+        } else if (b < 300) {
+            document.getElementById("bac").value = "Bậc 4"
+        } else if (b < 400) {
+            document.getElementById("bac").value = "Bậc 5"
+        } else {
+            document.getElementById("bac").value = "Bậc 6"
+        }
+    }
+
+    function sum() {
+        let bc = document.getElementById("bac").value;
+        let chiso = parseInt(document.getElementById("sd").value);
+        switch (bc) {
+            case "Bậc 1": {
+                let tong = chiso * 1500;
+                document.getElementById("t").value = tong;
+                break;
+            }
+            case "Bậc 2": {
+                let tong = chiso *1500+(chiso-50)*2000 ;
+                document.getElementById("t").value = tong;
+                break;
+            }
+            case "Bậc 3": {
+                let tong = chiso *1500+(chiso-50)*2500;
+                document.getElementById("t").value = tong;
+                break;
+            }
+            case "Bậc 4": {
+                let tong = chiso *1500+(chiso-50)*3000
+                document.getElementById("t").value = tong;
+                break;
+            }
+            case "Bậc 5": {
+                let tong = chiso **1500+(chiso-50)*3500;
+                document.getElementById("t").value = tong;
+            }
+
+        }
+
+    }
+</script>
