@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caro</title>
+</head>
+<body>
+<input type="button" onclick="chon()" value="chon toa do thay doi">
+<br>
+<script>
+    // hinh 1
+    let n = parseInt(prompt("nhap so o ca r0 "))
+    for (let i = 1; i <= n; i++) {
+        for (j = 1; j < n; j++) {
+            document.write("o&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+        }
+        document.write("<br>")
+    }
+    document.write("<br>")
+    document.write("<br>")
+
+    // hinh2
+
+
+    function chon() {
+        let a = parseInt(prompt("chon x"));
+        let b = parseInt(prompt("chon y"))
+        for (let i = 1; i <= n; i++) {
+            for (j = 1; j < n; j++) {
+                if ((i == a) && (j == b)) {
+                    document.write("x&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                } else {
+                    document.write("o&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                }
+            }
+            document.write("<br>")
+
+        }}
+
+
+</script>
+
+</body>
+</html>
