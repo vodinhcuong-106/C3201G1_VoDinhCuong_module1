@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lai ngan hang</title>
+</head>
+<body>
+<script>
+    let tg=parseInt(prompt("tien goc "))
+    let lai=parseInt(prompt("tien lai %thang"))
+    let sothang=parseInt(prompt("sothang nop"))
+    let tong=tg;
+    for(i=1;i<=sothang;i++){
+        tong=tong+tong*lai/100;
+
+    }
+    document.write("tien goc : "+tg);
+    document.write("<br>")
+    document.write("lai suat :" +lai);
+    document.write("<br>")
+    document.write("so thang :"+sothang);
+    document.write("<br>")
+    document.write("so tien lai phai tra: "+(tong-tg))
+    document.write("<br>")
+    document.write("tong tien :"+tong)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tam-giac-ngoi-sao</title>
+</head>
+<body>
+<script>
+    // tam giac 1
+    let a = parseInt(prompt("nhap so canh tam giac"))
+    for (i = 0; i <= a; i++) {
+        for (j = 0; j <= a; j++) {
+            if (i >= j) {
+                document.write(" * ")
+            } else {
+                document.write("&nbsp")
+            }
+        }
+        document.write("<br>")
+    }
+
+
+    document.write("<br>");
+    document.write("<br>");
+
+
+    // tam giac 2
+
+    for (i = 0; i <= a; i++) {
+        for (j = 0; j <= a; j++) {
+            if (i <= j) {
+                document.write(" * ")
+            }
+        }
+        document.write("<br>")
+    }
+
+    document.write("<br>");
+    document.write("<br>");
+
+
+    // tam giac 3
+
+    for (i = 0; i <= a; i++) {
+        for (j = 0; j <= a; j++) {
+            if (j <=(a - i)) {
+                document.write("&nbsp&nbsp&nbsp")
+            } else {
+                document.write("  * ");
+            }
+        }document.write(" <br>");
+    }
+    // tam giac 4
+    document.write("<br>");
+    document.write("<br>");
+    // tam giac 4
+    for (i = 0; i <= a; i++) {
+        for (j = 0; j <= a; j++) {
+            if (i >= j) {
+                document.write("&nbsp&nbsp&nbsp")
+            } else {
+                document.write(" *  ")
+            }
+        }
+        document.write("<br>")
+    }
+</script>
+
+
+</body>
+</html>

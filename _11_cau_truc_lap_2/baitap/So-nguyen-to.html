@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>songuyento</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th> SỐ LƯỢNG SỐ NGUYÊN TỐ CẦN IN n =</th>
+        <th id="in"> </th>
+    </tr>
+    <tr>
+        <td> KẾT QUẢ</td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+
+    let n = parseInt(prompt("NHap so luong so nguyen to can in"));
+    document.getElementById("in").innerHTML=n;
+    var m = 0;var a=1;
+   do{
+       let dem = 0;
+       for (let i = 2; i < a; i++) {
+           if (a % i == 0) {
+               dem++
+
+           }
+       }
+       // console.log(dem)
+       if (dem == 0) {
+           document.write("  "+a);
+           m++
+       }a++
+
+    }while(m<n)
+    console.log(m);
+    
+</script>

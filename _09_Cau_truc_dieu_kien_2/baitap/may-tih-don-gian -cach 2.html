@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may-tinh-don-gian</title>
+</head>
+<style>
+    table {
+        border-style: solid
+    }
+
+    td, th {
+        width: 50px;
+        height: 30px
+    }
+
+    input {
+        width: 50px;
+        height: 30px
+    }
+</style>
+<body>
+<center>
+    <p style="font-size: 20px">MÁY TÍNH CÁ NHÂN</p>
+    <table border="1">
+        <tr>
+            <th colspan="4"><input style="height: 30px;width: 200px;background-color: cadetblue" type="text"
+                                   id="result"></th>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="math(this.value)"></td>
+            <td><input type="button" value="2" onclick="math(this.value)"></td>
+            <td><input type="button" value="3" onclick="math(this.value)"></td>
+            <td><input type="button" value="+" onclick="math(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="math(this.value)"></td>
+            <td><input type="button" value="5" onclick="math(this.value)"></td>
+            <td><input type="button" value="6" onclick="math(this.value)"></td>
+            <td><input type="button" value="-" onclick="math(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="math(this.value)"></td>
+            <td><input type="button" value="8" onclick="math(this.value)"></td>
+            <td><input type="button" value="9" onclick="math(this.value)"></td>
+            <td><input type="button" value="*" onclick="math(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick="xoa()"></td>
+            <td><input type="button" value="o" onclick="math(this.value)"></td>
+            <td><input type="button" value="=" onclick="bang()"></td>
+            <td><input type="button" value="/" onclick="math(this.value)"></td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>
+<script>
+    function math(giatri) {
+        document.getElementById("result").value += giatri;
+    }
+    function bang() {
+        let result1 = document.getElementById("result").value;
+        document.getElementById("result").value = eval(result1)
+    }
+    function xoa() {
+        document.getElementById("result").value = ""
+    }
+
+</script>

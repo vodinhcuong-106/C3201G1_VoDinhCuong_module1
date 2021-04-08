@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game doan so</title>
+</head>
+<body>
+<form>
+    <input type="button" onclick="choi()" value="bat dau">
+    <input type="reset" value="reset">
+
+</form>
+</body>
+</html>
+<script>
+    function choi() {
+        let max = parseInt(prompt("nhap khoang doan min="))
+        let min = parseInt(prompt("nhap khoang doan min="))
+        b = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(b)
+
+        dem = 0;
+        do {
+            let a = parseInt(prompt("nhap so can chon"));
+            if (a > b) {
+                alert("so nhap lon hon");
+            } else if (a < b) {
+               alert("so nhap vao be hon");
+            } else{
+                alert("so nhap vao bang,chuc mung ban da chien thang");
+
+                break;
+            }
+            dem++;
+        } while (dem <= 3);}
+
+
+</script>

@@ -5,22 +5,24 @@
     <title>tien dien</title>
 </head>
 <style>
-    th {
+    th,input {
         text-align: center;
-        background-color: cadetblue;
-        color: red
+        background-color: white;
+        color: black;
+        width: 150px;height: 35px;
     }
 </style>
 <body>
 <center>
 
         <p>TÍNH TIỀN ĐIỆN</p>
+
         <table border="1">
             <tr>
                 <th>Chỉ số điện</th>
               <th> <input type="button"value="BẬC"onclick="bac()"> </th>
                 <th><input type="button" value="result" onclick="sum()"></th>
-                <th><input type="reset" value="RESET"></th>
+
             </tr>
             <tr>
                 <td><input type="text" placeholder=" so KW" id="sd"></td>
@@ -28,6 +30,7 @@
                 <td ><input type="text" placeholder="tong" id="t"></td>
             </tr>
         </table>
+
 </center>
 </body>
 </html>

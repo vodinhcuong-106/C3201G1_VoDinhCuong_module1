@@ -10,21 +10,26 @@
 <body>
 <center>
 <p style="font-size: 40px;color: brown"><b> TÍNH LÃI SUẤT</b></p>
+    <form>
 <table border="1">
     <tr>
         <th> TIỀN GỐC</th>
         <th> LÃI SUẤT THÁNG(%)</th>
         <th>SỐ THÁNG GỬI</th>
+        <th> TIỀN LÃI</th>
         <th> SỐ TIỀN PHẢI TRẢ</th>
         <th rowspan="2"><input style="width: 140px;height: 60px" type="button" value="kết quả" onclick="result()"></th>
+        <th rowspan="2"><input style="width: 140px;height: 60px" type="reset"value="reset"></th>
     </tr>
     <tr>
         <td><input type="text" placeholder="Nhap tien goc" id="tg"></td>
         <td><input type="text" placeholder="lai suat thang" id="ls"></td>
         <td><input type="text" placeholder="so thang gui" id="st"></td>
+        <td><input type="text" placeholder="Tien lai" id="tl"></td>
         <td><input type="text" placeholder="so tien phai tra" id="tongtien"></td>
     </tr>
 </table>
+    </form>
 </center>
 </body>
 </html>
@@ -35,5 +40,6 @@
         let n = parseInt(document.getElementById("st").value);
         let tong = tg * (Math.pow(1 + ls/100, n));
         document.getElementById("tongtien").value = tong
+        document.getElementById("tl").value=tong-tg;
     }
 </script>
