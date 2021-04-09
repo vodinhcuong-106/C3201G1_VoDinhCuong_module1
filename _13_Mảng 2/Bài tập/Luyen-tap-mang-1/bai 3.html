@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gia tri lon nhat va trung binh</title>
+</head>
+<body>
+<script>
+
+    // bai 3: gia tri trung binh cua mang va gia tri lon nhat
+    let n = parseInt(prompt("nhap so luong phan tu mang"))
+    let A = [];
+
+    for (let i = 0; i <= n - 1; i++) {
+        let a = parseInt(prompt("nhap gia tri"))
+        A[i] = a;
+    }
+    let max = A[0];
+
+    for (let i = 0; i < A.length; i++) {
+        if (A[i] > max) {
+            max = A[i];
+        }
+    }
+    let sum = 0;
+    for (let i = 0; i < A.length; i++) {
+        sum = sum + A[i];
+      }
+    document.write("A=" + A)
+    document.write("<br>")
+    document.write("gia tri lon nhat la " + max);
+    document.write("<br>")
+    document.write("gia tri trung binh " + sum / n);
+</script>
+</body>
+</html>

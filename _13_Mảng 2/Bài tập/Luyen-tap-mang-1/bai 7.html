@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xoa phan tu trong mang</title>
+</head>
+<body>
+<script>
+    let A = [];
+    for (let i = 0; i < 10; i++) {
+        let a = parseInt(prompt("nhap gia tri"))
+        A[i] = a;
+    }
+    document.write("A=" + A);
+    document.write("<br>");
+    let dem = 0;
+    let V = parseInt(prompt("nhap so V"))
+    for (c = i = 0; i < 10; i++) {
+        if (A[i] != V) {
+            A[c] = A[i];
+            c++;
+            dem++
+        }
+    }
+    for (i = dem; i < 10; i++) {
+        A[i] = 0;
+    }
+    document.write("so nhap vao " + V)
+    document.write("<br>")
+    document.write(A)
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<script>
+    // bai 1 co bao nhieu so >10 trong day
+
+    let n = parseInt(prompt("nhap so luong phan tu mang"))
+    let A = [];
+    let dem = 0;
+    for (let i = 0; i <= n - 1; i++) {
+        let a = parseInt(prompt("nhap gia tri"))
+        A[i] = a;
+    }
+    for (let i = 0; i < A.length; i++) {
+        if (A[i] >= 10) {
+            dem++;
+        }
+    }
+    document.write("A= " + A);
+    document.write("<br>");
+    document.write("ket qua co " + dem + " so lon hon 10 ");
+    document.write("<br>");
+
+    // bai2 tim max trong day
+    let max = A[0];
+    vitri = 0;
+    for (let i = 1; i < A.length; i++) {
+        if (A[i] > max) {
+            max = A[i];
+            vitri = i;
+        }
+    }
+    document.write("vitri  " + vitri + "co so " + max + " la lon nhat");
+
+
+
+</script>
+
+</body>
+</html>

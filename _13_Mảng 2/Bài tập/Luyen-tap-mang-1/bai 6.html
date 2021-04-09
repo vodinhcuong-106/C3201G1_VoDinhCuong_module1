@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai-6 kiem tra v</title>
+</head>
+<body>
+<script>
+    let A = [];
+    for (let i = 0; i < 10; i++) {
+        let a = parseInt(prompt("nhap gia tri"))
+        A[i] = a;
+    }
+    document.write("A=" + A);
+    document.write("<br>");
+    let n = parseInt(prompt("nhap so V"))
+    let dem=0;
+    for (let i = 0; i < A.length; i++) {
+        if (A[i] == n) {
+            document.write(+n+" is in the Array")
+            break;
+        } else{ dem++}
+
+        }
+    if(dem==10){ document.write(+n+" is not in the Array")}
+    </script>
+</body>
+</html>

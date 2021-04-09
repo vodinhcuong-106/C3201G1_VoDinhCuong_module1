@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tu dien</title>
+</head>
+<style>
+    td,th,input{width: 300px;height: 30px}
+</style>
+<body>
+<form>
+<table>
+    <tr>
+        <th><input type="button" value="English"></th>
+        <th><input type="button" value="Viet nam"></th>
+        <th><input type="button" value="result" onclick="click1()"></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="ch1"></td>
+        <td><input type="text" id="ch2"></td>
+        <td> <input type="reset"value="reset"></td>
+    </tr>
+</table>
+</form>
+
+</body>
+</html>
+<script>
+
+    function click1() {
+        let tienganh = (document.getElementById("ch1").value)
+        let E = ["hello", "cat", "dog", "chikken"];
+        let V = ["xinchao", "con meo", "con cho", "ga"];
+        let tiengviet = document.getElementById("ch2").value;
+        for (let i = 0; i < E.length; i++) {
+            if (tienganh == E[i]) {
+                document.getElementById("ch2").value = V[i]
+            }else{ document.getElementById("ch2").value= "nhap sai"}
+        }
+        for (let i = 0; i < E.length; i++) {
+            if (tiengviet == V[i]) {
+                document.getElementById("ch1").value = E[i]
+            }else{ document.getElementById("ch1").innerText = "nhap sai"}
+        }}
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in-ky-tu-dao-nguoc</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhap so luong phan tu mang"))
+    let A = [];
+
+    for (let i = 0; i <= n - 1; i++) {
+        let a = (prompt("nhap gia tri"))
+        A[i] = a;
+    }
+    document.write("truoc khi dao A1= "+A);
+    document.write("<br>");
+    let first=0;
+    let last=A.length-1;
+   while(first<last){
+       let b=A[first];
+       A[first]=A[last];
+       A[last]=b;
+       first++;
+       last--;
+    }
+    document.write("Sau khi dao A2="+A);
+</script>
+</body>
+</html>

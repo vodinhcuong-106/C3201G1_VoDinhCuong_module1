@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Noi phan tu</title>
+</head>
+<body>
+<script>
+    let A = [];
+    let B=[];
+    let C=[];
+    for (let i = 0; i < 10; i++) {
+        let a = parseInt(prompt("gia tri "+i+" mang A"))
+        A[i] = a;
+    }
+    for (let i = 0; i < 10; i++) {
+        let b = parseInt(prompt("gia tri "+i+" mang B"))
+        B[i] = b;
+    }
+    for (let i = 0; i < 20; i++) {
+        let c = parseInt(prompt("gia tri "+i+" mang C"))
+        C[i] = c;
+    }
+
+    let D=A.concat(B).concat(C);
+    document.write("mang A="+A)
+    document.write("<br>")
+    document.write("mang B="+B)
+    document.write("<br>")
+    document.write("mang C="+C)
+    document.write("<br>")
+    document.write("mang noi A+B+C="+D)
+</script>
+</body>
+</html>

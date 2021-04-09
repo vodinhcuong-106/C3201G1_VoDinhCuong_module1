@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sap-xep-mang-theo-thu-tu giam-dan</title>
+</head>
+<body>
+<script>
+    let A = [];
+    for (let i = 0; i < 10; i++) {
+        let a = parseInt(prompt("nhap gia tri"))
+        A[i] = a;
+    }
+    document.write("truoc khi doi "+A);
+    document.write("<br>");
+   A.sort(function (a,b) {return(a-b)})
+    document.write("sau khi sap xep tang dan "+A);
+
+</script>
+</body>
+</html>
