@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem-tra-chuoi-giong-nhau-ko</title>
+</head>
+<body>
+<script>
+    let A = [];
+    let B = [];
+    for (let i = 0; i < 5; i++) {
+        let a = parseInt(prompt("nhap gia tri" + i + " cua chuoi A"))
+        A[i] = a;
+    }
+    for (let i = 0; i < 5; i++) {
+        let b = parseInt(prompt("nhap gia tri" + i + " cua chuoi B"))
+        B[i] = b;
+    }
+    dem = 0;
+    for (i = 0; i < A.length; i++) {
+        for (j = 0; j < A.length; j++) {
+            if (A[i] == B[j]) {
+                dem++
+            }
+        }
+    }
+    document.write("chuoi A =" + A);
+    document.write("<br>");
+    document.write("chuoi B =" + B)
+    document.write("<br>");
+    if (dem == A.length) {
+        document.write("A giong B")
+    } else {
+        document.write("A khac B")
+    }
+</script>
+</body>
+</html>

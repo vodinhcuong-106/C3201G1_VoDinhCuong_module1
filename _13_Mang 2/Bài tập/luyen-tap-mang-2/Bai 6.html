@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim-ky-tu-trong-mang-va-thay-the</title>
+</head>
+<body>
+<script>
+    let A = [];
+    for (let i = 0; i < 6; i++) {
+        let a = prompt("nhap gia tri "+i+"cua A");
+        A[i] = a;
+    }
+    document.write("chuoi A truoc doi " +A);
+    document.write("<br>");
+    for(let i=1;i<A.length;i++){
+        if(A[i]=="-"){A[i]="_"}
+    }
+    document.write("chuoi A sau doi " +A)
+</script>
+</body>
+</html>

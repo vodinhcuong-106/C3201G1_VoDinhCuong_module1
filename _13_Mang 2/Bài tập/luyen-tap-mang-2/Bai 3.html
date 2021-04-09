@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dem ky tu so trong mang</title>
+</head>
+<body>
+<script>
+    let A = [1, 2, 43, 2, 4, 'd', 'r', 'g'];
+    document.write("mang A= " + A);
+    let dem = 0;
+    for (let i = 0; i < A.length; i++) {
+        if (typeof A[i] == "number") {
+            dem++
+        }
+    }
+    document.write("<br>");
+    document.write("so ky tu so trong mang A la" + dem);
+</script>
+</body>
+</html>
