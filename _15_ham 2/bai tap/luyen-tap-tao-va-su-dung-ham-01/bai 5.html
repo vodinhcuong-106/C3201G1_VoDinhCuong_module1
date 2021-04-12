@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tao-chuoi-ngoi-sao</title>
+</head>
+<script>
+    let A = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', ' Altair', 'Dubhe', 'Regulus'];
+    let B = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function seach(n) { let dem = 0;
+        for (let i = 0; i < A.length; i++) {
+
+            if (n == A[i]) {
+                c = document.write("chi so vi tri " + i + " ten chom sao " + B[i])
+            } else {
+                dem++
+            }
+        }
+        if (dem == (A.length)) {
+            c = document.write("nhap sai")
+        }
+        return c;
+    }
+</script>
+<body>
+<script>
+    let a = prompt("nhap ten ngoi sao ");
+    document.write("Ten ngoi sao " + a);
+    document.write("<br>");
+    seach(a);
+</script>
+</body>
+</html>

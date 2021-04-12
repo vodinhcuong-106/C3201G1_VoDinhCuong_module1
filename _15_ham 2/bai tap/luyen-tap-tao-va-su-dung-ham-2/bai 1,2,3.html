@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    // ham binh phuong
+    function binhphuong(x) {
+        y = document.write(+x+"2= " + (x * x));
+        return y;
+    }
+
+    // ham tinh chu vi dien tich
+    function hinhtron(x) {
+        s = x * x * 3.14;
+        p = 2 * x * 3.14
+        dt = document.write("dien tich s=" + s);
+        document.write("<br>")
+        cv = document.write("Chu vi p=" + p);
+        return s;
+        return p;
+    }
+
+    // ham tinh giai thua
+    function giaithua(x) {
+        t = 1;
+        for (let i = 1; i <= x; i++) {
+            t = t * i;
+        }
+        gthua = document.write("giai thua cua " + x + "la  " + t);
+        return gthua;
+    }
+</script>
+<body>
+<script>
+    // bai1: binh phuong
+    let a=parseInt(prompt("nhap so can binh phuong"));
+    document.write("so can binh phuong "+a);
+    document.write("<br>");
+    binhphuong(a);
+    document.write("<br>");
+    document.write("<br>");
+
+    // bai 2:chu vi dien tich hinh tron
+    let r=parseInt(prompt("nhap ban kinh r= "));
+    document.write("ban kinh hinh tron r= "+r);
+    document.write("<br>");
+    hinhtron(r);
+    document.write("<br>");
+    document.write("<br>");
+
+    // Bai 3:tinh giai thua
+    let b=parseInt(prompt("nhap so"));
+    document.write("nhap so");
+    document.write("<br>");
+   giaithua(b);
+    document.write("<br>");
+    document.write("<br>");
+</script>
+</script>
+</body>
+</html>

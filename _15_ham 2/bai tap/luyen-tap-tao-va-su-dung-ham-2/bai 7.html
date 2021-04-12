@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doi-cho-hai-so-nguyen</title>
+</head>
+<script>
+    function hoandoi(a, b) {
+        let c = a;
+        a = b;
+        b = c;
+        hd=document.write("sau hoan doi x= "+a+" y= "+b)
+return hd;
+    }
+</script>
+<body>
+<script>
+    let x = parseInt(prompt("nhap vao gia tri x"));
+    let y = parseInt(prompt("nhap vao gia tri y"));
+    document.write("gia tri x= " + x);
+    document.write("<br>")
+    document.write("gia tri y= " + y);
+    document.write("<br>")
+    hoandoi(x,y);
+</script>
+</body>
+</html>

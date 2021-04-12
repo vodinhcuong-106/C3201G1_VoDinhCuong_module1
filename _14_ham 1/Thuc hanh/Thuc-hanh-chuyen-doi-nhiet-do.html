@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen-do-F-C</title>
+</head>
+<body>
+<h1> Temperature Converter</h1>
+<h2> Type a value in the Fahrenheit field to convert the value to Celcius</h2><br>
+<form>
+<table>
+    <tr>
+        <td>Fahrenheit</td>
+        <td> <input type=text id="fah"oninput="chuyendoi(this.value)"onchange="chuyendoi(this.value)"></td>
+        <td rowspan="2"> <input type="reset"value="Reset"></td>
+    </tr>
+    <tr>
+        <td>Celcius  </td>
+        <td><input id="cel"type="text"oninput="chuyendoif(this.value)"onchange="chuyendoif(this.value)" > </td>
+    </tr>
+</table>
+</form>
+<script>
+    function chuyendoi(a) {let f=parseInt(a)
+    let c=(f-32)*1.8;
+    document.getElementById("cel").value=c;
+    }
+    function chuyendoif(a) {let c =parseInt(a)
+        let f=c/1.8+32;
+        document.getElementById("fah").value=f;
+
+    }
+</script>
+</body>
+</html>

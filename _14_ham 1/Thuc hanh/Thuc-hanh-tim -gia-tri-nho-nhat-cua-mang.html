@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim-gia-tri-nho-nhat-cua-mang</title>
+</head>
+<body>
+<script>
+    let A = [];
+    let n = parseInt(prompt("nhap so phantu cua mang "))
+    for (let i = 0; i < n; i++) {
+        a = parseInt(prompt("A[" + i + "]="));
+        A[i] = a;
+    }
+    document.write("A = "+A);
+    document.write("<br>");
+    document.write("phan tu nho nhat cua mang la " + min(A));
+
+    function min(x) {
+        let min = x[0];
+        for (let i = 1; i < x.length; i++) {
+            if (x[i] < min) {
+                min = x[i]
+            }
+        }
+        return min;
+    }
+</script>
+</body>
+</html>

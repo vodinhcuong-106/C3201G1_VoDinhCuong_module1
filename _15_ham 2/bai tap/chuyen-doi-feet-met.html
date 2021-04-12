@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen-do-F-C</title>
+</head>
+<body>
+<h1> chuyen doi meet-feet</h1>
+<br>
+<form>
+<table>
+    <tr>
+        <td>Feet</td>
+        <td> <input type=text id="f"oninput="chmet(this.value)"></td>
+        <td rowspan="2"> <input type="reset"value="Reset"></td>
+    </tr>
+    <tr>
+        <td>meter  </td>
+        <td><input id="m"type="text"oninput="chfeet(this.value)" > </td>
+    </tr>
+</table>
+</form>
+<script>
+    function chmet(a) {let f=parseInt(a)
+    let met =f*0.305;
+    document.getElementById("m").value=met;
+    }
+    function chfeet(a) {let met =parseInt(a)
+        let f =met*3.279;
+        document.getElementById("f").value=f;
+
+    }
+</script>
+</body>
+</html>

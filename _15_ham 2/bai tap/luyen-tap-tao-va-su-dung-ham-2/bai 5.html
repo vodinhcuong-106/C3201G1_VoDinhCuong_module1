@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem-tra-ky-tu-nho-nhat-trong-3-so</title>
+</head>
+<script>
+    function min(a, b, c) {
+        if (a < b) {
+            if (a < c) {
+                x = document.write("min = " + a)
+            } else {
+                x = document.write("min = " + c)
+            }
+        } else {
+            if (b < c) {
+                x = document.write("min = " + b)
+            } else {
+                x = document.write("min = " + c)
+            }
+        }
+    }
+</script>
+<body>
+<script>
+    let x = parseInt(prompt("nhap vao gia tri x"));
+    let y = parseInt(prompt("nhap vao gia tri y"));
+    let z = parseInt(prompt("nhap vao gia tri z"));
+    document.write("gia tri x= " + x);
+    document.write("<br>")
+    document.write("gia tri y= " + y);
+    document.write("<br>")
+    document.write("gia tri z= " + z);
+    document.write("<br>")
+    min(x,y,z)
+</script>
+</body>
+</html>

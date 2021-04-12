@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dao-nguoc-mang</title>
+</head>
+<script>
+    function daonguoc(A) { let B=A.reverse()
+       C=document.write("sau khi dao  "+B) ;return C;
+
+    }
+</script>
+<body>
+<script>
+    let n=parseInt(prompt("nhap chieu dai mang"))
+    let X=[];
+    for (let i=0;i<=n;i++){
+        let a=prompt("nhap X["+i+"] =");
+        X[i]=a;
+    }
+    document.write("X="+X);
+    document.write("<br>")
+    daonguoc(X)
+</script>
+</body>
+</html>

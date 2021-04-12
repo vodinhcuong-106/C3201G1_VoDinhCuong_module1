@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem-tra-so-nhap-vao-phai-ky-tu-ko</title>
+</head>
+<script>
+    function check(x) {
+        if (typeof x == "string") {
+            if ((parseInt(x)*1==parseInt(x))){
+                b = document.write("gia tri nhap vao la so :fall")
+            } else {
+                b = document.write(" gia tri nhap vao la ky tu :true")
+            }}
+            return b;
+        }
+</script>
+<body>
+<script>
+    let a = prompt("nhap vao");
+    document.write("gia tri nhap vao " + a);
+    document.write("<br>")
+    check(a);
+</script>
+
+</body>
+</html>

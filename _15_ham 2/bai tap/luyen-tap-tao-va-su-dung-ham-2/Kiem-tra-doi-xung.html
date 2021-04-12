@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem-tra-doi-xung</title>
+</head>
+<script>
+    function check(a) {
+        let checkstring = Array.from(a);
+        alert(checkstring);
+        l = checkstring.length - 1
+        dem = 0;
+        for (let i = 0; i < checkstring.length; i++) {
+            if (checkstring[i] == checkstring[l - i]) {
+                dem++
+
+            }
+        }
+        if (dem == checkstring.length) {
+            b = document.write("chuoi doi xung")
+        } else {
+            b = document.write("khong doi xung")
+        }
+        return b
+    }
+
+</script>
+<body>
+<script>
+    let x = prompt('nhap vao chuoi');
+    document.write("chuoi x la " + x);
+    document.write("<br>");
+    check(x);
+
+</script>
+</body>
+</html>

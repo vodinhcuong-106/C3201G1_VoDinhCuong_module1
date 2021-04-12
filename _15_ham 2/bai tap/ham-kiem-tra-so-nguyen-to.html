@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem-tra-so-nguyen-to</title>
+</head>
+<body>
+<script>
+    // kiem tra so nguyen to
+    let a = parseInt(prompt("nhap so can kiem tra"));
+    document.write("So nhap vao de kiem tra "+a);
+    document.write("<br>");
+    snt(a);
+    document.write("<br>");
+    document.write("<hr>")
+    function snt(n) {
+        let dem = 0;
+        for (let i = 2; i < n; i++) {
+            if ((n % i) == 0) {
+                dem++
+            }
+        }
+        if (dem == 0) {
+            b = document.write(+n + " la so nguyen to");
+        } else {
+            b = document.write(+n + "  ko phai la so nguyen to");
+        }
+        return b;
+    }
+
+
+    // tim so nguyen to so luong n=? cho truoc
+    // ham tim so nguyen to neu dung thi tra ve 1
+    let a1 = parseInt(prompt("Nhap so luong  so nguyen to can in"));
+    document.write("Nhap so luong can in "+a1+" so");
+    document.write("<br>");
+    allsnt(a1);
+    document.write("<br>");
+    document.write("<hr>")
+    function snt1(n) {
+        let dem = 0;
+        for (let i = 2; i < n; i++) {
+            if ((n % i) == 0) {
+                dem++
+            }
+        }
+        if (dem == 0) {
+            return 1;
+        }
+    }
+
+    // ham lay so nguyen to voi so luong n cho truoc
+    function allsnt(x) {
+        let dem = 0;
+        let a = 0;
+        while (dem <= x) {
+            if (snt1(a) == 1) {
+                result = document.write(+a + " ")
+                dem++;
+            }
+            a++;
+        }
+        return result;
+    }
+
+    // tim tat ca so nguyen to nho hon n
+    let a2 = parseInt(prompt("Nhap so can n "));
+    document.write("Tim so nguyen to nho hon "+a2);
+    document.write("<br>");
+    sntnhohon(a2);
+
+    function sntnhohon(x) {
+        for (let a = 0; a < x; a++)
+
+            if (snt1(a) == 1) {
+                result = document.write(+a + " ")
+            }
+        return result;
+    }
+</script>
+
+</body>
+</html>

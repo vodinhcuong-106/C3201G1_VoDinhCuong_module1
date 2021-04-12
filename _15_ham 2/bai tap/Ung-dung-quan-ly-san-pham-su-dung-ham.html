@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    th, td {
+        width: 200px;
+        height: 50px;
+       background-color: white;
+
+    }
+    input{background-color: #548e19;width: 50px;height: 30px;
+    color: white}
+</style>
+<body>
+<form>
+    <p style="font-size: 30px"><b> Add new product</b></p>
+    <table>
+        <th><input style="background-color: white ;width: 310px;height: 30px;color: black" id="ten" type="text"></th>
+        <th><input type="button" onclick="add()" value="Add"></th>
+    </table>
+    <p style="font-size: 20px"><b>Display all product</b> </p>
+
+   <table>
+       <tr>
+           <th style="text-align: left"> <b>Product name </b></th>
+           <th  rowspan="2" id="sum"style="background-color: white;color: red;width: 310px;height: 30px;text-align: right"> </th>
+       </tr>
+   </table>
+
+    <p id="table"></p>
+
+</form>
+</body>
+</html>
+<script>
+    function add() {
+        let b = document.getElementById("ten").value;
+        arr.push(b)
+        display()
+        // alert(b)
+    }
+
+
+    let arr = ['Sony Xsperia', 'Samsung Galaxy', 'Nokia 6', 'Xiaomi Redmi Note 4', 'Apple Iphone 6S', 'Xiaomi 5Sphus',
+        'Apple Iphone 8plus', 'Fujitsu F-04E', 'Oppo E-71']
+    display()
+
+
+    function display() {
+        let string = '<table cellpadding="0px"cellspacing="0px">'
+        for (let i = 0; i < arr.length; i++) {
+            string += ' <tr>\n' +
+                '           <td>' + arr[i] + '</td>\n' +
+                '           <td> <input type="button"value="Edit"onclick="edit(' + i + ')"></td>\n' +
+                '           <td> <input type="button"value="delete"onclick="del(' + i + ')"></td>\n' +
+                '       </tr>'
+        }
+        string += '</table>'
+
+        document.getElementById("table").innerHTML = string;
+        document.getElementById("sum").innerHTML="product "+arr.length
+    }
+
+    function del(i) {
+        arr.splice(i,1);
+        display();
+    }
+    function edit(i) {
+        arr[i] =  prompt("nhap vao thay doi");
+        display();
+
+    }
+
+</script>
