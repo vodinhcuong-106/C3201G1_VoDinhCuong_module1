@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim-phan-tu-sap-xep-trong-b-nhung-ko-nam-trong-A</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let A = [];
+    let B = [];
+    let a = parseInt(prompt("nhap chieu dai mang A"));
+    let a1 = parseInt(prompt("nhap chieu dai mang B"));
+    for (let i = 0; i < a; i++) {
+        let b = prompt("phan tu A[" + i + "] =")
+        A[i] = b;
+    }
+    for (let i = 0; i < a1; i++) {
+        let b1 = prompt("phan tu B[" + i + "] =")
+        B[i] = b1;
+    }
+
+    document.write(" A="+A);
+    document.write("<br>");
+    document.write(" B="+B);
+    document.write("<br>");
+    check(A,B);
+
+
+    function check(X,Y) {
+        for (let i = 0; i < X.length; i++) {
+            for (let j = 0; j < Y.length; j++) {
+                if (X[i] == Y[j]) {
+                    Y.splice(j, 1)
+                }
+
+            }
+        } b=document.write("Ket qua "+Y)
+        return  b
+    }
+
+</script>

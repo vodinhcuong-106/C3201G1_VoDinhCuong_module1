@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ve hinh</title>
+</head>
+<body>
+<script>
+
+    for (i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+            if ((i == 1) || (i == 5) || (j == 1) || (j == 5)) {
+                document.write("*")
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        }  document.write("<br>")
+    }
+    document.write("<br>")
+    document.write("<br>")
+    // hinh 1 :tam giac vuong
+    for (i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+            if ((j == 1) || (i == 5) || (i == j)) {
+                document.write("*")
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        }
+        document.write("<br>")
+    }
+
+    document.write("<br>")
+    document.write("<br>")
+
+    // hinh2: tam giac cab dac
+    for (i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 9; j++) {
+            if (((i == 5) || (j == 5)) || ((i == 4) && (j >= 2) && (j <= 8))
+                ||
+                ((i == 3) && (j >= 3) && (j <= 7))
+                || ((i == 2) && (j >= 4) && (j <= 6))) {
+
+                document.write("*")
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        }
+        document.write("<br>")
+    }
+
+    // hinh 3:tam giac can rong
+    document.write("<br>")
+    document.write("<br>")
+
+    for (i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 9; j++) {
+            if (((i == 5) || ((i == 4) && ((j == 2)
+                || (j == 8))) || ((i == 3) && ((j == 3) || (j == 7)))
+                || ((i == 2) && ((j == 4) || (j == 6))
+                    || ((i == 1) && (j == 5))))) {
+
+                document.write("*")
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        }
+        document.write("<br>")
+    }
+
+
+</script>
+</body>
+</html>

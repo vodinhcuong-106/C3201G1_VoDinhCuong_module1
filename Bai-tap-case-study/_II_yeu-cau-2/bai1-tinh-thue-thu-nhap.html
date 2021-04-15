@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thue-thu-nhap</title>
+</head>
+<body>
+<form>
+<table border="1">
+    <tr>
+        <th> Luong nhan vien</th>
+        <th><input type="button" value=" Thue thu nhap" onclick="thue1()"></th>
+        <th><input type="button" value="Luong rong" onclick="sum()"></th>
+        <th><input type="reset" value="resest"></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="luong"></td>
+        <td><input type="text" id="thue"></td>
+        <td><input type="text" id="tong"></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
+<script>
+
+
+    function thue1() {
+        let luong1 = parseInt(document.getElementById("luong").value);
+        luong1< 7 ? l = 0.05 : luong1 < 15 ? l = 0.1 : l = 0.2
+        switch (l) {
+            case 0.05: {
+                let a = 0.05 * luong1;
+                document.write(a)
+                document.getElementById("thue").value = a
+                break;
+            }
+            case 0.1: {
+                let b = 0.1 * luong1;
+                document.getElementById("thue").value = b;
+                break;
+            }
+            case 0.2: {
+                let c = 0.2 * luong1;
+                document.getElementById("thue").value = c;
+                break;
+            }
+        }
+
+    }
+    function sum() {let luong1 = parseInt(document.getElementById("luong").value)
+        let th=parseFloat(document.getElementById("thue").value);
+
+    let sum=th+luong1;
+    document.getElementById("tong").value=sum;
+
+    }
+</script>

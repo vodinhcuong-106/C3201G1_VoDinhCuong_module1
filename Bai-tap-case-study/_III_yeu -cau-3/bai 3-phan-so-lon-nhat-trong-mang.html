@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phan-so</title>
+</head>
+<body>
+<script>
+
+    let A = [];
+    let B = [];
+    let a = parseInt(prompt("nhap chieu dai mang a"));
+    for (let i = 0; i < a; i++) {
+        let b = parseInt(prompt("phan tu A[" + i + "] ="))
+        A[i] = b;
+    }
+    for (let i = 0; i < a; i++) {
+        let b1 = parseInt(prompt("phan tu B[" + i + "] ="))
+        B[i] = b1;
+    }
+    document.write("A=" + A);
+    document.write("<br>");
+    document.write("B=" + B);
+    document.write("<br>");
+    let i = 1;
+    let k;
+    let max = A[0] / B[0]
+    while (i < A.length) {
+        if ((A[i] / B[i]) > max) {
+            max = (A[i] / B[i]);
+            k = i
+        }
+
+        i++;
+    }
+    document.write("max phanso=  " + max + " chi so vi tri " + k);
+</script>
+</body>
+</html>

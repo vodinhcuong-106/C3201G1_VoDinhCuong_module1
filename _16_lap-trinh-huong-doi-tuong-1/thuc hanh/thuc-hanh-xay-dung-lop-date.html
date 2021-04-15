@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xay-dung-lop-date</title>
+</head>
+<body>
+<script>
+
+    let MyDate = function (day, month, year) {
+
+        this.day = day;
+
+        this.month = month;
+
+        this.year = year;
+
+
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+
+        }
+        this.setDate = function (day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year
+            alert(day + "," + month + "," + year)
+        }
+    }
+    let date = new MyDate(2, 2, 2007);
+    let day = date.getDay(); // 2
+
+    let month = date.getMonth(); // 2
+
+    let year = date.getYear(); // 2007
+    alert(day + "/" + month + "/" + year);
+    let d = date.setDay(10);
+    let m = date.setMonth(11);
+    let y = date.setYear(2019);
+    date.setDate(10, 11, 2019)
+    alert(date.getDay() + "/" + date.getMonth() + "/" + date.getYear());
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(C) {
+            this.C = C;
+        }
+
+        getDoC() {
+            return this.C
+        };
+
+        getChuyenCF() {
+            let f = this.C * 1.8 + 32
+            document.write(this.C + "do C = " + f + " do F")
+            return f
+
+        };
+
+        getChuyenCK() {
+            let k = this.C + 273;
+            document.write(this.C + "do C = " + k + " do K")
+            return k;
+        }
+    }
+let a=0;
+    do {
+        a = parseInt(prompt("nhap do C"))
+
+    }
+    while (a < (-273))
+    let doC = new Temperature(a);
+    doC.getChuyenCF();
+    document.write("<br>")
+    doC.getChuyenCK();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xay-dung-lop-hinh-tron</title>
+</head>
+<body>
+<script>
+    // let Circle = function(radius) {
+    //     this.radius = radius;
+    //
+    //     this.getRadius = function () {
+    //         return radius;
+    //     }
+    //     this.getArea = function () {
+    //         return Math.PI * radius * radius;
+    //     }
+    // }
+    // let circle = new Circle(4);
+    // let radius = circle.getRadius();
+    //
+    // let area = circle.getArea();
+    // alert("radius: " + radius + "; area: " + area);
+
+
+    class C {
+        constructor(bankinh) {
+            this.r = bankinh;
+        }
+
+        getRadi() {
+            return this.r
+        }
+
+        setR(r1) {
+            this.r = r1
+        }
+
+        getDt() {
+            return (this.r * 3.14 * this.r)
+        }
+    }
+
+    let duongtron = new C(8);
+    let a = duongtron.getRadi();
+    alert(a)
+    alert("dientich " + duongtron.getDt());
+    duongtron.setR(6);
+    alert("sauthaydoi r="+duongtron.getRadi())
+    alert("dientich " + duongtron.getDt());
+
+</script>
+</body>
+</html>

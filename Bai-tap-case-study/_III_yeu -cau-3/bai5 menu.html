@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+</head>
+<style>
+    th,td{width: 170px;height:30px;background-color: wheat;text-align: center;font-size: 20px ;color: red}
+    input{width: 170px;height: 30px;background-color: wheat;color: red;text-align: center}
+</style>
+
+
+
+
+
+
+<body>
+<center>
+<p style="font-size: 30px;color: midnightblue"> Menu</p>
+<p id="table"></p><br>
+<input style="width: 70px;height: 35px;background-color: yellowgreen" type="button" onclick="tg()" value="tong tien">
+<input type="number" id="tt">
+</center>
+</body>
+</html>
+<script>
+
+    let m = ['Cafe', 'Cam vat', 'Nuoc ep ca rot', 'Nuoc ep ca chua', 'Nuoc loc', 'Nuoc dua','thoat goi mon'];
+    let dongia = [30, 50, 30, 20, 60, 80,0];
+    let sol = [''];
+
+    function display() {
+        let string = '<table border="1"cellspacing="0"cellpadding="0">'
+        for (let i = 0; i < m.length; i++) {
+            string += '<tr>\n' +
+                '        <td style="width: 30px;height: 35">' + (i+1) + '</td>\n' +
+                '        <td>' + m[i] + '</td>\n' +
+                '        <td style="width: 30px;height: 35">' + dongia[i] + '</td>\n' +
+                '        <td ><input type="text"id="soluong' + i + '"> </td>\n' +
+                '        <td><input type="button"value="chon"onclick="chon(' + i + ')"></td>\n' +
+                '        <td> <input value="0" type="text"placeholder="tong tien"id="t' + i + '"> </td>\n' +
+                '        <td> <input type="button"value="thanhtien"onclick="sum1(' + i + ')"> </td>\n' +
+                '    </tr>'
+
+        }
+        string += '</table>'
+        document.getElementById("table").innerHTML = string;
+    }
+
+    display()
+
+    function chon(i) {
+        do {
+            alert("don gia san pham" + dongia[i])
+            let a = parseInt(prompt("nhap so luong"));
+            alert('soluong da chon ' + a);
+            let id = 'soluong' + i;
+            document.getElementById(id).value = a;
+break;
+        }
+        while (i != 7)
+    }
+
+    display()
+
+    function sum1(i) {
+        let id = 'soluong' + i;
+        let t = 't' + i;
+        let soluong = parseInt(document.getElementById(id).value);
+        let tong = dongia[i] * soluong;
+        alert("tong tien phai tra " + tong)
+        document.getElementById(t).value = tong;
+        return tong
+    }
+
+    function tg() {
+        let tong1 = 0;
+        for (let i = 0; i < m.length; i++) {
+            let t = 't' + i;
+            let a = parseInt(document.getElementById(t).value) ;
+            tong1+= a
+        }
+        document.getElementById("tt").value = tong1;
+    }
+</script>

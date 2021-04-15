@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhap-so-in-ra-chu</title>
+</head>
+<body>
+<script>
+    let number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    let C = ['khong', 'Mot', 'Hai', 'ba', 'bon', 'nam', 'sau', 'bay', 'tam', 'chin'];
+    let A = prompt('nhap chuoi').split("");
+
+    document.write("chuoibandau" + A);
+    document.write("<br>");
+    let B = [];
+    for (let i = 0; i < A.length; i++) {
+        for (let j=0;j<number.length;j++)
+            if (A[i] == number[j]) {
+                B[i] = C[j];
+            }
+    }
+        document.write("Chuoi sau " + B);
+</script>
+</body>
+</html>

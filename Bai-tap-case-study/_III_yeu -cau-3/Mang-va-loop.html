@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai-1-cong-don-mang</title>
+</head>
+<body>
+<script>
+    let A=[];
+    let B=[];
+    let a=parseInt(prompt("nhap chieu dai mang a"));
+    for (let i=0;i<a;i++){
+        let b=parseInt(prompt("phan tu A["+i+"] ="))
+        A[i]=b;
+    }
+    document.write("A="+A);
+    document.write("<br>");
+    for (let i=1;i<A.length;i++){
+        B[0]=A[0]
+        B[i]=A[i]+B[i-1]
+    }
+    document.write("B= "+B)
+</script>
+</body>
+</html>

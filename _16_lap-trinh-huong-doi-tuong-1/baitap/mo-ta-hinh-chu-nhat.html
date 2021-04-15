@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mo-ta-hinh-chu-nhat</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500px" height="500px" style="border:1px solid #d3d3d3;"></canvas>
+<br>
+
+<script>
+    class Rectange {
+        constructor(chieudai, chieurong) {
+            this.chieudai = chieudai;
+            this.chieurong = chieurong;
+            this.VeCanvas = function () {
+                var ctx = document.getElementById("myCanvas").getContext("2d");
+                var width = rectange.getChieurong();
+                var hight = rectange.getChieudai();
+
+                ctx.fillRect(50, 50, width, hight)
+                ctx.clearRect(51, 51, width - 2, hight - 2)
+
+            }
+        }
+
+        getChieudai() {
+            return this.chieudai
+        }
+
+        getChieurong() {
+            return this.chieurong
+        }
+
+        getChuvi() {
+            let p = (this.chieudai + this.chieurong) * 2
+            document.write("chu vi " + p)
+            return p;
+        }
+
+        getDientich() {
+            let s = this.chieudai * this.chieurong
+            document.write("dien tich" + s)
+            return s
+        }
+
+    }
+
+    let a = prompt("nhap a=");
+    let b = prompt("nhap b=")
+    let rectange = new Rectange(a, b);
+    document.write("chieu dai la " + rectange.getChieudai());
+    document.write('<br>')
+    document.write("chieu rong la " + rectange.getChieurong());
+    document.write('<br>')
+    rectange.getChuvi();
+    document.write('<br>');
+    rectange.getDientich()
+    rectange.VeCanvas();
+
+
+</script>
+
+</body>
+</html>

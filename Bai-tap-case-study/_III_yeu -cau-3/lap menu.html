@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+</head>
+<style>
+    th, td {
+        width: 170px;
+        height: 30px;
+        background-color: wheat;
+        text-align: center;
+        font-size: 20px;
+        color: red
+    }
+
+    input {
+        width: 160px;
+        height: 30px;
+        background-color: wheat;
+        color: red;
+        text-align: center;
+        font-size: 18px
+    }
+</style>
+<body>
+<center>
+    <p style="font-size: 30px;color:darkblue ">MENU</p>
+    <form style="background: Background">
+        <table>
+            <tr>
+                <th><input type="number" id="chose" placeholder="chon so"></th>
+                <th><input type="button" value="chose number" onclick="chon()"></th>
+                <th><input type="reset" value="reset"></th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th> STT</th>
+                <th>menu</th>
+                <th>Don gia</th>
+                <th>so luong</th>
+                <th>Thanh tien</th>
+            </tr>
+        </table>
+        <p id="inputtable"></p>
+        <table>
+            <tr>
+                <th><input type="button" value="TONG TIEN" onclick="tong()"></th>
+                <th><input type="text" id="sum" placeholder="tongtien"></th>
+
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
+<script>
+    let menu = ['Cafe', 'Cam vat', 'Nuoc ep ca rot', 'Nuoc ep ca chua', 'Nuoc loc', 'Nuoc dua', 'thoat goi mon'];
+    let dongia = [30000, 50000, 30000, 20000, 60000, 80000, 0];
+    display()
+
+    function display() {
+        let string = '<table>'
+        for (let i = 0; i < menu.length; i++) {
+            string += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td> ' + menu[i] + '</td>\n' +
+                '        <td> ' + dongia[i] + '</td>\n' +
+                '        <td><input type="text"value="0" id="soluong' + i + '"></td>\n' +
+                '        <td><input value="0" type="text"id="sumoney' + i + '"></td>\n' +
+                '    </tr>'
+
+        }
+        string += '</table>'
+        document.getElementById("inputtable").innerHTML = string;
+
+    }
+
+
+    function chon() {
+        //
+        // let nhap = prompt('nhap so can chon');
+        // document.getElementById('chose').value = nhap;
+        let inputNumber = parseInt(document.getElementById("chose").value);
+        for (let i = 0; i < menu.length; i++) {
+            if (inputNumber == 7) {
+                alert("hoan thanh chon mon ");
+
+                break;
+            }
+            if (inputNumber == (i + 1)) {
+                let id = 'soluong' + i;
+                let id1 = 'sumoney' + i
+                alert("ban dang chon" + menu[i])
+                alert("don gia cho san pham " + dongia[i])
+                let soluong = parseInt(prompt('nhap so luong'))
+                document.getElementById(id).value = soluong;
+                let thanhtien = soluong * parseInt(dongia[i])
+                document.getElementById(id1).value = thanhtien;
+            }
+        }
+    }
+
+    function tong() {
+        let sum1 = 0;
+        for (let i = 0; i < menu.length; i++) {
+            let id1 = 'sumoney' + i
+            let a = parseInt(document.getElementById(id1).value);
+            sum1 += a
+        }
+        document.getElementById("sum").value = sum1;
+
+    }
+</script>
